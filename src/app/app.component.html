@@ -1,20 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
+  <h1 class="mat-h1">
+	Suddi Samachara
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+  <mat-divider></mat-divider>
+  <p><span  class="menu-category" *ngFor = "let c of categories" (click)="changeFeed(c.split(':')[0])">{{c.split(":")[0]}}</span>  </p>
+<mat-divider></mat-divider>
+<div class="newsBox">
+<mat-card  *ngFor = "let o of obj">
+<a href="{{o.url}}" target="_new"><img mat-card-image src="{{o.urlToImage}}"></a>
 
+<mat-card-title class="mat-h3">{{o.title}}</mat-card-title>
+<mat-card-content>{{o.description}}</mat-card-content>
+<mat-card-footer>{{o.publishedAt}}</mat-card-footer>
+</mat-card> 
+<!--<div class="articleBox" *ngFor = "let o of obj">
+	
+<img class="articleThumbanil" src="{{o.urlToImage}}" >
+	
+	<p>{{o.description}}</p>
+	<p>{{o.publishedAt}}</p>
+</div> -->
+</div>
+<div class="rest">
+<!--<app-new-cmp></app-new-cmp>
+<app-news-cmp></app-news-cmp>
+-->
+</div>
