@@ -10,21 +10,25 @@
 			<span  class="menu-category"><a [routerLink]="['/sources/']">Sources.</a></span> 
 		</div>
 		<!-- Mobile only -->
-		<mat-menu class="mobile-menu-items" #appMenu="matMenu">
+		<div class="mobile-menu-items">
+		<mat-menu  #appMenu="matMenu">
 			<button [routerLink]="['/news/']" mat-menu-item>My Feed</button>
 			<button *ngFor = "let c of categories" [routerLink]="['/category/',c.split(':')[0]]" mat-menu-item>{{c.split(":")[0]}}</button> 
 			<button [routerLink]="['/sources/']" mat-menu-item>Sources</button>
 		</mat-menu>
-		<button class="mobile-menu-btn" mat-icon-button [matMenuTriggerFor]="appMenu">My Links
-			<mat-icon>keyboard_arrow_down</mat-icon>
-		</button>
-
-
+		</div>
+		<div class="mobile-menu-btn">
+			<button  mat-icon-button [routerLink]="['/news/']" >My Feed</button>
+			<button class="" mat-icon-button [matMenuTriggerFor]="appMenu">
+				<mat-icon>more_vertical</mat-icon>
+			</button>
+		</div>
 		<mat-form-field appearance="outline">
 			<mat-label>Search</mat-label>
 			<input [(ngModel)]="searchText" matInput placeholder="IP">
 			<mat-icon matSuffix class="searchBtn"(click)="searchFeed()">search</mat-icon>
 		</mat-form-field>
+		
 	 
 	</div>
 	

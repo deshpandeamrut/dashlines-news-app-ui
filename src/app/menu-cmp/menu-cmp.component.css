@@ -18,15 +18,36 @@ cursor:pointer;
 .mobile-menu-btn{
 	display:none;
 }
+.tool-bar{
+	display: grid;
+    grid-template-columns: 85% 15%;
+    align-items: center;
+}
+.regular-menu{
+	display: inline;
+    text-align: center;
+    margin-left: 15%;
+}
+.mobile-menu-items{
+display:none;	
+}
+/* Mobile Rules */
 @media screen and  (max-width: 480px){
 .menu-category{
 	display:grid;
 }
 .regular-menu{
 	display:none;
+	
 }
 .mobile-menu-btn{
 	display:grid;
 	margin:0px auto;
+	grid-template-columns:10% 10%;
+	justify-content:center;
+}
+
+.tool-bar{
+	display: inherit;
 }
 }
