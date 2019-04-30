@@ -88,3 +88,15 @@ $repeat:100;
       border-bottom:5px solid rgba(random(255),random(255),random(255),0.7);
     }
 }
+@media screen and  (max-width: 480px){
+    .newsBox{
+	width:100%;
+	margin:10px auto;
+	display: grid;
+    grid-template-columns: 95%;
+    //grid-column-gap: 5%;
+    grid-row-gap: 0.3%;
+	justify-content:center;
+	
+}
+}
