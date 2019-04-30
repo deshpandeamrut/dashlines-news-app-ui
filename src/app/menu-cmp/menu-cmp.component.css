@@ -15,3 +15,18 @@ cursor:pointer;
 	cursor:pointer;
 	margin-left:10px;
 }
+.mobile-menu-btn{
+	display:none;
+}
+@media screen and  (max-width: 480px){
+.menu-category{
+	display:grid;
+}
+.regular-menu{
+	display:none;
+}
+.mobile-menu-btn{
+	display:grid;
+	margin:0px auto;
+}
+}

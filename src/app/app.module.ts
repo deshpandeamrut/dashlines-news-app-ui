@@ -16,7 +16,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatIconModule,
-  MatRippleModule
+  MatRippleModule,
+  MatMenuModule
 } from '@angular/material';
 import { CategoryComponent } from './category/category.component';
 import { MenuCmpComponent } from './menu-cmp/menu-cmp.component';
@@ -36,7 +37,7 @@ CategoryComponent,
 MenuCmpComponent,
 SourceCmpComponent,
 SearchCmpComponent,
-ListSourcesCmpComponent	
+ListSourcesCmpComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +48,7 @@ ListSourcesCmpComponent
   MatIconModule,
   MatRippleModule,
   MatToolbarModule,
-	
+	MatMenuModule,
 	FormsModule,
 	MatCardModule,
 	MatDividerModule,

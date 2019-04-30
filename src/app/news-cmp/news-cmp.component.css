@@ -86,3 +86,22 @@ text-decoration:none;
 .mat-form-field-wrapper{
 	padding-bottom:0px !important;
 }
+
+@media screen and  (max-width: 480px){
+	.outer-wrapper{
+		display:inherit;
+	}
+	.newsBox{
+		width: 100%;
+		margin: 10px 1% 10px 1%;
+		display: grid;
+		grid-template-columns: 95%;
+		//grid-column-gap: 0%;
+		grid-row-gap: 0.3%;
+	}
+	.right-news-box{
+		//border-top:1px solid gray;
+		width:90%;
+		margin-top:20px;
+	}
+}
