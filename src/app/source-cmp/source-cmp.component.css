@@ -8,7 +8,7 @@
 	width:90%;
 	margin:10px auto;
 	display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 30% 30% 30% 30%;
     grid-column-gap: 5%;
     grid-row-gap: 2%;
 	
@@ -42,7 +42,7 @@ text-decoration:none;
 		margin:10px 10px 0px 0px;
 }
 .newsBox{
-    width: 60%;
+    //width: 60%;
     margin: 10px 1% 10px 1%;
     display: grid;
     grid-template-columns: 30% 30% 30%;

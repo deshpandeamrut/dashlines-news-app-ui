@@ -1,2 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+.mat-form-field-wrapper{
+  padding-bottom: 0px;
+}
+html,body{
+	font-family:calibri !important;
+}
+div{
+	font-family:calibri !important;
+}
+.source *{
+	text-decoration: none;
+    color: gray;
+    font-size: 15px;
+}
+.outer-wrapper{
+	margin-bottom:2%;
+}

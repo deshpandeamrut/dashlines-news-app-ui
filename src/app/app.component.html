@@ -1,29 +1,49 @@
+<router-outlet></router-outlet>
 <!--The content below is only a placeholder and can be replaced.-->
+<!--
 <div style="text-align:center">
-  <h1 class="mat-h1">
-	Suddi Samachara
-  </h1>
-  <mat-divider></mat-divider>
-  <p><span  class="menu-category" *ngFor = "let c of categories" (click)="changeFeed(c.split(':')[0])">{{c.split(":")[0]}}</span>  </p>
-<mat-divider></mat-divider>
-<div class="newsBox">
-<mat-card  *ngFor = "let o of obj">
-<a href="{{o.url}}" target="_new"><img mat-card-image src="{{o.urlToImage}}"></a>
+	  <h1 class="mat-h1">
+		Suddi Samachara
+	  </h1>
+	  <mat-divider></mat-divider>
+	  <p class="tool-bar">
+	  <span  class="menu-category" *ngFor = "let c of categories" (click)="changeFeed(c.split(':')[0])">{{c.split(":")[0]}}</span> 
 
-<mat-card-title class="mat-h3">{{o.title}}</mat-card-title>
-<mat-card-content>{{o.description}}</mat-card-content>
-<mat-card-footer>{{o.publishedAt}}</mat-card-footer>
-</mat-card> 
-<!--<div class="articleBox" *ngFor = "let o of obj">
-	
-<img class="articleThumbanil" src="{{o.urlToImage}}" >
-	
-	<p>{{o.description}}</p>
-	<p>{{o.publishedAt}}</p>
-</div> -->
-</div>
-<div class="rest">
-<!--<app-new-cmp></app-new-cmp>
-<app-news-cmp></app-news-cmp>
+	  <mat-form-field appearance="outline">
+		<mat-label>Search</mat-label>
+		<input [(ngModel)]="searchText" matInput placeholder="IPL">
+		 <mat-icon matSuffix class="searchBtn"(click)="searchFeed()">search</mat-icon>
+	  </mat-form-field>
+	 
+	</p>
+	<mat-divider></mat-divider>
+	<div class="outer-wrapper">
+		<div class="newsBox">
+			<mat-card  *ngFor = "let o of featuredArticles">
+			<a href="{{o.url}}" target="_new"><img mat-card-image src="{{o.urlToImage}}"></a>
+
+			<mat-card-title class="mat-h5"><a href="{{o.url}}" target="_new">{{o.title}}</a></mat-card-title>
+			<mat-card-subtitle class="mat-small">{{o.source}}</mat-card-subtitle>
+			<mat-card-content class="mat-body">{{o.content | truncateEnd}}</mat-card-content>
+			</mat-card> 
+
+		</div>
+
+		<div class="right-news-box">
+			<div  class="right-article" *ngFor = "let o of myFeedArticles">
+				<div class="img-wrapper-left">
+					<a href="{{o.url}}" target="_new"><img  src="{{o.urlToImage}}"></a>
+				</div>
+				<div class="title-wrapper-right">
+					<p class="mat-h5"><a href="{{o.url}}" target="_new">{{o.title | truncateWords:10}}</a></p>
+					<p class="mat-small descr">{{o.description | truncateWords:15}}<p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	 <mat-divider></mat-divider>
+</div> 
+<app-new-cmp></app-new-cmp>
+<app-news-cmp></app-news-cmp> 
 -->
-</div>

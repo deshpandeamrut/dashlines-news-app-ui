@@ -1,0 +1,18 @@
+<div style="text-align:center">
+	  <h1 class="mat-h1">
+		Dashlines
+	  </h1>
+	  <mat-divider></mat-divider>
+	  <p class="tool-bar">
+	   <span  class="menu-category"><a [routerLink]="['/news/']">My Feed.</a></span> 
+	  <span  class="menu-category" *ngFor = "let c of categories"><a [routerLink]="['/category/',c.split(':')[0]]">{{c.split(":")[0]}}.</a></span> 
+		<span  class="menu-category"><a [routerLink]="['/sources/']">Sources.</a></span> 
+	  <mat-form-field appearance="outline">
+		<mat-label>Search</mat-label>
+		<input [(ngModel)]="searchText" matInput placeholder="IPL">
+		 <mat-icon matSuffix class="searchBtn"(click)="searchFeed()">search</mat-icon>
+	  </mat-form-field>
+	 
+	</p>
+	<mat-divider></mat-divider>
+</div>

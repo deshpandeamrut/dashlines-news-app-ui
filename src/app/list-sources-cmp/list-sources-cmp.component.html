@@ -1,0 +1,12 @@
+<app-menu-cmp></app-menu-cmp>
+<div class="outer-wrapper">
+		<div class="newsBox">
+			<mat-card  *ngFor = "let o of sources">
+			<a href="{{o.url}}" target="_new"><img mat-card-image src="{{o.urlToImage}}"></a>
+			<mat-card-title class="mat-h5"><a href="{{o.url}}" target="_new">{{o.name}}</a></mat-card-title>
+			<span class="source"><a [routerLink]="['/source/',o.id]">{{o.id}}</a></span>
+			<mat-card-content class="mat-body">{{o.description}}</mat-card-content>
+			</mat-card> 
+
+		</div>
+</div>

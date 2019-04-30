@@ -1,3 +1,28 @@
-<p>
-  news-cmp works!
-</p>
+<app-menu-cmp></app-menu-cmp>
+<div class="outer-wrapper">
+	<div class="newsBox">
+		<mat-card  *ngFor = "let o of featuredArticles">
+		<a href="{{o.url}}" target="_new"><img mat-card-image src="{{o.urlToImage}}"></a>
+
+		<mat-card-title class="mat-h5"><a href="{{o.url}}" target="_new">{{o.title}}</a></mat-card-title>
+		<span class="source"><a [routerLink]="['/source/',o.sourceId]">{{o.source}}</a></span>
+		<mat-card-content class="mat-body">{{o.content | truncateEnd}}</mat-card-content>
+		</mat-card> 
+
+	</div>
+
+	<div class="right-news-box">
+		<div  class="right-article" *ngFor = "let o of myFeedArticles">
+			<div class="img-wrapper-left">
+				<a href="{{o.url}}" target="_new"><img  src="{{o.urlToImage}}"></a>
+			</div>
+			<div class="title-wrapper-right">
+				<p class="mat-h5"><a href="{{o.url}}" target="_new">{{o.title | truncateWords:10}}</a></p>
+				<p class="mat-small descr">{{o.description | truncateWords:15}}<p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+	 <mat-divider></mat-divider>
+		

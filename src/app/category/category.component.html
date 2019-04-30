@@ -1,0 +1,13 @@
+<app-menu-cmp></app-menu-cmp>
+<div class="outer-wrapper">
+		<div class="newsBox">
+			<mat-card  *ngFor = "let o of latestArticles">
+			<a href="{{o.url}}" target="_new"><img mat-card-image src="{{o.urlToImage}}"></a>
+
+			<mat-card-title class="mat-h5"><a href="{{o.url}}" target="_new">{{o.title}}</a></mat-card-title>
+			<span class="source"><a [routerLink]="['/source/',o.sourceId]">{{o.source}}</a></span>
+			<mat-card-content class="mat-body">{{o.content | truncateEnd}}</mat-card-content>
+			</mat-card> 
+
+		</div>
+</div>
