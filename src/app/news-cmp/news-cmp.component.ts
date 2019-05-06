@@ -15,6 +15,7 @@ export class NewsCmpComponent implements OnInit {
   featuredArticles = [];
   myFeedArticles = [];
   searchText="";
+  mySourceFeed = [];
   
   categories = [];
  constructor(private http: Http) { }
@@ -27,14 +28,17 @@ export class NewsCmpComponent implements OnInit {
 	  for(var i=0;i<this.latestArticles.length;i++){
 		  console.log(i);
 			this.featuredArticles.push(this.latestArticles[i]);
-			if(i==2){
-				break;
+			if(i==10){
+			//	break;
 			}
 	  }
 	  });
 	   
 	  this.http.get(myGlobals.baseurl + "/news/myFeed").subscribe((res)=>{
 	  console.log(this.myFeedArticles = res.json()	)
+	  });
+	  this.http.get(myGlobals.baseurl + "/news/mySources").subscribe((res)=>{
+	  console.log(this.mySourceFeed = res.json())
 	  });
 	 
    }

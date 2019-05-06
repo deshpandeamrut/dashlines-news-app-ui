@@ -38,8 +38,9 @@ text-decoration:none;
 	margin-left:10px;
 }
 .right-article{
-		display:flex;
+		/*display:flex;
 		margin:10px 10px 0px 0px;
+		*/
 }
 .newsBox{
     width: 60%;
@@ -51,6 +52,7 @@ text-decoration:none;
 }
 .outer-wrapper{
 		display:flex;
+		margin-bottom:25%;
 }
 .right-news-box{
 		width:30%;
@@ -86,7 +88,9 @@ text-decoration:none;
 .mat-form-field-wrapper{
 	padding-bottom:0px !important;
 }
-
+.right-category-wrapper{
+	display:flex;
+}
 @media screen and  (max-width: 480px){
 	.outer-wrapper{
 		display:inherit;
