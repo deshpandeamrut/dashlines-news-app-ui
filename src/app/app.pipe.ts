@@ -3,6 +3,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name: 'truncateWords' })
 export class LimitDescriptionPipe implements PipeTransform {
   transform(content:string,count:number):string {
+	   if(content == null){
+		  return "";
+	  }
 	var words = [];
 	words = content.split(" ");
 	var wordString = words.slice(0,count);
